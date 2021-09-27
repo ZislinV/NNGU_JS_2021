@@ -1,5 +1,4 @@
-alert ("Hello World!"); //(1)
-
+console.log("Hello World!"); // Вывод строки в терминал
 
 let age = 25;
 let physicsNumber = 23n;
@@ -7,8 +6,8 @@ const nameMySister = "Olya";
 const youAreWoman = false;
 let howMuchMoney = null;
 let namePat = undefined;
-const myAccountData = {age:30, zodiacSign:"Весы"};
-let userID = Symbol ("id"); //(2)
+const myAccountData = { age: 30, zodiacSign: "Весы" };
+let userID = Symbol("id_Object"); // Создание переменных под каждый тип данных
 
 console.log(age);
 console.log(physicsNumber);
@@ -17,32 +16,35 @@ console.log(youAreWoman);
 console.log(howMuchMoney);
 console.log(namePat);
 console.log(myAccountData);
-console.log(userID); //(3)
+console.log(userID); // Вывод в консоль созданные переменные
 
-console.log (typeof age);
-console.log (typeof physicsNumber);
-console.log (typeof nameMySister);
-console.log (typeof youAreWoman);
-console.log (typeof howMuchMoney);
-console.log (typeof namePat);
-console.log (typeof myAccountData);
-console.log (typeof userID); //(4)
-
-try {
-    nameMySister = "Maria";
-console.log (typeof nameMySister)
-} 
-catch (err) {console.log ("Ошибка")}; //(5)
+console.log(typeof age);
+console.log(typeof physicsNumber);
+console.log(typeof nameMySister);
+console.log(typeof youAreWoman);
+console.log(typeof howMuchMoney);
+console.log(typeof namePat);
+console.log(typeof myAccountData);
+console.log(typeof userID); // Вывод типов переменных
 
 try {
-    myAccountData = {age:31, zodiacSign:"Рак"};
-    console.log (typeof myAccountData)} 
-catch (err) {console.log ("Ошибка")}; // (6) 
+  nameMySister = "Maria";
+  console.log(typeof nameMySister);
+} catch (err) {
+  console.log("Ошибка");
+} // Попытка изменить переменную, объявленную через const
 
-let userData = {age:25, zodiacSign:"Овен"};
-userData = {age:24, zodiacSign:"Рыбы"};
-console.log (userData); //(7)
+try {
+  myAccountData = { age: 31, zodiacSign: "Рак" };
+  console.log(typeof myAccountData);
+} catch (err) {
+  console.log("Ошибка");
+} // Попытка изменить переменную с типом object, объявленную через const
 
-var userName = {firstName:"Саша", lastName:"Пономарёв"};
-userData = {firstName:"Вова", lastName:"Петров"};
-console.log (userData); //(8)
+let userData = { age: 25, zodiacSign: "Овен" };
+userData = { age: 24, zodiacSign: "Рыбы" };
+console.log(userData); // Попытка изменить переменную с типом object, объявленную через let
+
+var userName = { firstName: "Саша", lastName: "Пономарёв" };
+userData = { firstName: "Вова", lastName: "Петров" };
+console.log(userData); // Попытка изменить переменную с типом object, объявленную через var
