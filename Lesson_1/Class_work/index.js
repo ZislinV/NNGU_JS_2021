@@ -23,3 +23,6 @@ console.log(lastName);
 
 const middleName = "Владимирович";
 console.log(middleName);
+
+const nameOurCity = "Nizhny Novgorod";
+console.log(nameOurCity);
