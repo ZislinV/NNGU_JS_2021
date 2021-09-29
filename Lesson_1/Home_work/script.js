@@ -29,14 +29,14 @@ console.log(typeof userID); // Вывод типов переменных
 
 try {
   nameMySister = "Maria";
-  console.log(typeof nameMySister);
+  console.log(nameMySister);
 } catch (err) {
   console.log("Ошибка");
 } // Попытка изменить переменную, объявленную через const
 
 try {
   myAccountData = { age: 31, zodiacSign: "Рак" };
-  console.log(typeof myAccountData);
+  console.log(myAccountData);
 } catch (err) {
   console.log("Ошибка");
 } // Попытка изменить переменную с типом object, объявленную через const
@@ -46,5 +46,5 @@ userData = { age: 24, zodiacSign: "Рыбы" };
 console.log(userData); // Попытка изменить переменную с типом object, объявленную через let
 
 var userName = { firstName: "Саша", lastName: "Пономарёв" };
-userData = { firstName: "Вова", lastName: "Петров" };
-console.log(userData); // Попытка изменить переменную с типом object, объявленную через var
+userName = { firstName: "Вова", lastName: "Петров" };
+console.log(userName); // Попытка изменить переменную с типом object, объявленную через var
