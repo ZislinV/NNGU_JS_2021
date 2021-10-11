@@ -223,13 +223,15 @@
 
 /// Задача 2 от Алексея ///
 
-let M = 100;
-let N = 26;
-let days = 0;
+// let M = 100;
+// let N = 26;
+// let days = 0;
 
-while (M >= N) {
-  M /= 2;
-  days += 1;
-}
+// while (M >= N) {
+//   M /= 2;
+//   days += 1;
+// }
 
-console.log(days);
+// console.log(days);
+
+///////
