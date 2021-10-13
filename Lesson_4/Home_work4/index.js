@@ -208,3 +208,60 @@
 // +str[0] + +str[1] + +str[2] == +str[3] + +str[4] + +str[5]
 //   ? console.log("да")
 //   : console.log("нет");
+
+// Циклы while и for
+
+//  Решите эти задачи сначала через цикл while, а затем через цикл for.
+
+//  1. Выведите столбец ычисел от 1 до 100.
+
+// let i = 1;
+// while (i < 101) {
+//   console.log(i);
+//   i++;
+// }
+
+// for (let i = 1; i < 101; i++) {
+//   console.log(i);
+// }
+
+//  2. Выведите столбец чисел от 11 до 33.
+
+// let i = 11;
+// while (i < 34) {
+//   console.log(i);
+//   i++;
+// }
+
+// for (let i = 11; i < 34; i++) {
+//   console.log(i);
+// }
+
+//  3. Выведите столбец четных чисел в промежутке от 0 до 100.
+
+// let i = 0;
+// while (i < 101) {
+//   if (i % 2 == 1) continue;
+//   console.log(i);
+//   i += 2;
+// }
+
+// for (let i = 0; i < 101; i += 2) {
+//   console.log(i);
+// }
+
+//  4. С помощью цикла найдите сумму чисел от 1 до 100.
+
+// let sum = 0;
+// let i = 1;
+// while (i < 101) {
+//   sum += i;
+//   i++;
+// }
+// console.log(sum);
+
+// let sum = 0;
+// for (i = 1; i < 101; i++) {
+//   sum += i;
+// }
+// console.log(sum);
