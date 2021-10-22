@@ -160,3 +160,21 @@
 // }
 
 // console.log(getDigitsSum(number));
+
+// 17. Напишите стрелочную функцию, которая будет возвращать true если строка является палиндромом и false в противном случае.
+
+// const checkPalindrome = (str) => {
+//   let pal = "";
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] === str[str.length - 1 - i]) {
+//       pal = pal + str[i];
+//     }
+//   }
+//   if (str === pal) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// };
+
+// console.log(checkPalindrome("шалаш"));
