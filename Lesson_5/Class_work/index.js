@@ -195,16 +195,30 @@
 //     : false;
 // console.log(glasn(letter));
 
+// Задача про палиндромы
+
+// const palindrome = (str) => {
+//   let rever = str.split("").reverse().join("");
+//   if (rever === str) {
+//     console.log("да");
+//   } else {
+//     console.log("нет");
+//   }
+// };
+// palindrome("шалаш");
+
 const palindrome = (str) => {
-  let rever = str.split("").reverse().join("");
-  if (rever === str) {
-    console.log("да");
+  let pal = "";
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === str[str.length - 1 - i]) {
+      pal = pal + str[i];
+    }
+  }
+  if (str === pal) {
+    return true;
   } else {
-    console.log("нет");
+    return false;
   }
 };
-palindrome("шалаш");
 
-// let str = "Вася";
-// let rever = str.split("").reverse().join("");
-// console.log(rever);
+console.log(palindrome("шалаш"));
