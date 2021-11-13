@@ -130,3 +130,125 @@
 //   return newArr;
 // };
 // console.log(getNewArr(arr1, arr2));
+
+//////////////////////////// PART II //////////////////////////////
+//////////////// Продвинутая работа с функциями ///////////////////
+
+// console.log(global);
+
+// var name = "Alex";
+
+// function example() {
+//   console.log(this);
+// }
+// console.log(global.name);
+// не заработало
+//////////////////////
+// const user = {
+//   name: "Alex",
+//   age: "25",
+//   getName: function () {
+//     console.log(this.name);
+//   },
+// };
+// user.getName();
+//////////////////////
+
+// function getName() {
+//   console.log(this.name);
+// }
+
+// function setName(newName) {
+//   this.name = newName;
+//   console.log(this.name);
+// }
+
+// const user = {
+//   name: "Alex",
+//   age: "25",
+//   getUserName: getName,
+//   setUserName: setName,
+// };
+// user.getUserName();
+
+// const user1 = {
+//   name: "Ivan",
+//   age: "28",
+//   getUserName: getName,
+//   setUserName: setName,
+// };
+// user1.getUserName();
+
+// const admin = {
+//   name: "Max",
+//   age: "45",
+//   getAdminName: getName,
+//   setUserName: setName,
+// };
+
+// admin.getAdminName();
+
+// console.log(user);
+// user.setUserName("Ira");
+// user.getUserName;
+// console.log(user);
+
+/////////
+
+// function example() {
+//   console.log(this);
+// }
+// const testObject = {
+//   testMethod: example,
+// };
+// testObject.testMethod();
+
+///////////
+
+// function startFight() {
+//   return this.strange * this.agility;
+// }
+
+// const hero = {
+//   name: "John",
+//   strange: 20,
+//   agility: 10,
+//   health: 100,
+//   fight: startFight,
+// };
+
+// const dracula = {
+//   name: "Vlad",
+//   strange: 50,
+//   agility: 7,
+//   health: 1000,
+//   fight: startFight,
+// };
+
+// console.log(hero.fight(), dracula.fight());
+
+// if (hero.fight() > dracula.fight()) {
+//   console.log("Герой победил!! Ура!");
+// } else {
+//   console.log("Провал, вы погибли");
+// }
+
+///////////////////////// Практика /////////////////////////////
+
+const city = {
+  cityName: "Moscow",
+  population: "15 ml",
+  getCityName: function () {
+    return this.cityName;
+  },
+  getPopulation: function () {
+    return this.population;
+  },
+  setSomeValue: function (key, value) {
+    this[key] = value;
+  },
+};
+console.log(city);
+city.setSomeValue("cityName", "Paris");
+city.setSomeValue("population", "9 ml");
+console.log(city);
