@@ -214,3 +214,79 @@
 // firstCard.setFromValue("Max");
 // console.log(firstCard);
 // firstCard.show();
+
+////////////// КЛАССЫ ///////////////
+
+// class Parent {
+//   constructor(name) {
+//     this.name = name;
+//   }
+
+//   sayName() {
+//     return `Привет, мое имя ${this.name}`;
+//   }
+// }
+
+// const firstParent = new Parent("Max");
+// console.log(firstParent);
+// console.log(firstParent.sayName());
+
+// class Child extends Parent {
+//   constructor(name, lastName) {
+//     super(name);
+//     // this.lastName = lastName;
+//   }
+//   sayName() {
+//     console.log("Это внутренний метод");
+//   }
+//   sayFullName() {
+//     const nameString = `${super.sayName()} ${this.lastName}`;
+//     return nameString;
+//   }
+// }
+
+// get lastName(){
+//     return this._lastName;
+// }
+
+// set lastName(newValue){this._lastName}
+
+// getLastName(){return this.lastName}
+
+// const firstChild = new Child("Ivan", "Petrov");
+
+// console.log(firstChild);
+// console.log(firstChild.sayFullName());
+// firstChild.sayName();
+
+/////////////////// Практика ////////////////////
+
+class People {
+  constructor(name, surname) {
+    this.name = name;
+    this.surname = surname;
+  }
+  getFullName() {
+    return `Имя: ${this.name}, Фамилия: ${this.surname}`;
+  }
+}
+
+const firstPeople = new People("Ivan", "Ivanov");
+console.log(firstPeople.getFullName());
+
+class Worker extends People {
+  constructor(name, surname, rate, daysCount) {
+    super(name, surname);
+    this.rate = rate;
+    this.daysCount = daysCount;
+  }
+  getSalary() {
+    return `${this.getFullName()}. Получает ${this.rate * this.daysCount} руб.`;
+  }
+}
+
+const firstWorker = new Worker("Semen", "Petrov", 1500, 20);
+console.log(firstWorker.getSalary());
+
+const secondWorker = new Worker("Petr", "Molotov", 2900, 20);
+console.log(secondWorker.getSalary());
